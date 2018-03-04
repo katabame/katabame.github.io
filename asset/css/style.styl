@@ -1,0 +1,264 @@
+// imports
+@import 'ress'
+@import 'comfortaa'
+@import 'icomoon'
+@import 'circle'
+
+// functions
+random(min, max)
+	return math(math(0, 'random')*(max - min + 1) + min, 'floor')
+
+// easter eggs
+.flip
+	transform: scale(-1, -1)
+.invert
+	filter: invert()
+
+.card
+	position: relative
+	min-height: calc(20rem*1.414)
+	min-width: calc(20rem*1)
+	height: calc(20vw*1.414)
+	width: calc(20vw*1)
+	margin: 1rem 1rem
+	background-color: #ffffff
+	border-radius: 3px
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+	user-select: none
+	text-align: center
+
+
+// styles
+body
+	background: #ecf3f3
+
+.wrapper
+	position: relative
+	width: 100%
+	z-index: 1
+	padding: 3rem
+
+#profile-container
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	justify-content: center
+	align-items: center
+
+	.profile-card
+		@extend .card
+		address
+			position: absolute
+			bottom: 5%
+			width: 100%
+			display: flex
+			justify-content: center
+		.info
+			margin-top: 3%
+			color: #909090
+			font-size: 80%
+		p
+			margin-bottom: 2%
+		&>img
+			margin-top: -30%
+			background-color: #eac1c1
+			border: 3px solid @background-color
+			width: 40%
+			border-radius: 50%
+		&:before
+			width: 100%
+			height: 45%
+			display: inline-block
+			content: ""
+			background: url("/asset/img/cover.jpg") no-repeat center center/cover
+			border-radius: 3px 3px 0 0
+	.discord-status
+		@extend .card
+		min-height: calc(6rem*1.414)
+		height: calc(6vw*1.414)
+		background-color: #7289DA
+		color: #ffffff
+		padding: 3%
+
+		&> *
+			position: absolute
+		#discord-avatar
+			border-radius: 50%
+			width: 25%
+			left: 5%
+		#status
+			width: 1.25rem
+			height: @width
+			border-radius: 50%
+			z-index: 1
+			left: 23.5%
+			top: 52%
+			background-color: #747f8d
+			box-shadow: inset 0 0 0 2px rgba(199, 204, 209, .6)
+			&.online
+				background-color: #43b581
+				box-shadow: inset 0 0 0 2px rgba(180, 225, 205, .6)
+			&.idle
+				background-color: #faa61a
+				box-shadow: inset 0 0 0 2px hsla(37, 96%,82%, .6)
+			&.dnd
+				background-color: #f04747
+				box-shadow: inset 0 0 0 2px hsla(0, 85%, 84%, .6)
+		#hype-badge
+			width: 10%
+			left: 12.5%
+			bottom: 3%
+			.tooltip-content
+				margin-left: -1.5rem
+		#discord-name
+			top: 20%
+			left: 35%
+		#playing
+			top: 55%
+			left: 35%
+
+	.skill-card
+		@extend .card
+		min-height: calc(13.5rem*1.414)
+		height: calc(13.5vw*1.414)
+		padding: 1rem
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+		align-content: flex-start
+		.circle
+			width: 20%
+
+#works-container
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	.box
+		@extend .card
+		min-width: 12rem
+		min-height: @min-width
+		width: 12vw
+		height: @width
+		img
+			border-radius: 5%
+			width: 45%
+			height: @width
+			margin-top: 7%
+			object-fit: contain
+		p
+			margin-bottom: 15%
+		&> [class*="icon"]
+			color: #212121
+			margin: .5rem
+
+#footer
+	display: flex
+	justify-content: center
+	footer
+		@extend .card
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		min-height: 3rem
+		height: 3vw
+		width: 60%
+		p
+			margin-right: 1rem
+			#ribbon:after
+				content: ''
+				display: inline-block
+				width: 1.5em
+				height: @width
+				background-image: url("/asset/img/puzzleribbon.png")
+				background-size: contain
+				background-repeat: no-repeat
+				vertical-align: middle
+				margin-left: .3em
+
+
+// tooltip
+.tooltip
+	.tooltip-content
+		display: none
+	&:hover
+		.tooltip-content
+			position: absolute
+			display: block
+			margin-top: -2.5rem
+			background-color: #000000
+			padding: .5rem
+			color: #ffffff
+			min-width: 5rem
+			z-index: 10
+			border-radius: 3px
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+			user-select: none
+			text-align: center
+			font-size: .8rem
+			img
+				margin-top: .5rem
+				width: 10rem
+	&[data-tooltip-has-image]
+		.tooltip-content
+			margin-top: -8.25rem
+
+// Button
+providers = {
+	twitter: #1CA0F1,
+	discord: #7289DA,
+	steam: #000000,
+	github: #231F20,
+	mail: #77dd77,
+	bitcoin: #f4ac04
+}
+
+base($provider = null, $color = #ffffff)
+	&.icon-{$provider}
+		&:hover
+			background-color: #ffffff
+			color: $color
+		cursor: pointer
+		color: #ffffff
+		background-color: $color
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 1.2rem
+		border: 2px $color solid
+
+.button
+	background-color: #ffffff
+	height: 3rem
+	width: @height
+	margin: 0 2%
+	border-radius: 50%
+	transition: all .2s
+	for provider, color in providers
+		base: provider, color
+
+// particle animations
+#particle-container
+	position: fixed
+	z-index: 0
+
+.particle
+	position: absolute
+	border-radius: 50%
+
+for $i in 1..60
+	@keyframes particle-animation-{$i}
+		100%
+			transform: translate3d((random(1, 90) * 1vw), (random(1, 90) * 1vh), (random(1, 100) * 1px))
+
+	.particle:nth-child({$i})
+		animation: particle-animation- + $i 60s alternate infinite
+		$size = random(1, 5) + 5px
+		opacity: (random(1, 100) / 100)
+		height: $size
+		width: $size
+		animation-delay: $i * -.2s
+		transform: translate3d((random(1, 90) * 1vw), (random(1, 90) * 1vh), (random(1, 100) * 1px))
+		background: hsl(random(1, 360), 70%, 50%)

@@ -1,0 +1,157 @@
+doctype html
+html
+	head
+		/!
+			 ∧＿＿∧
+			(=・ω・=)
+			 ⧵⌶⌶⌶/　You can't make a cupcake without breaking few eggs
+
+		meta charset="utf-8"
+		meta http-equiv="X-UA-Compatible" content="IE=edge"
+		meta name="viewport" content="width=device-width, initial-scale=1"
+
+		meta property="og:url" content="https://kataba.me"
+		meta property="og:type" content="website"
+		meta property="og:title" content="katabame portfolio ☘"
+		meta property="og:description" content="See my profile!"
+		meta property="og:image" content="https://kataba.me/asset/img/cover.jpg"
+
+		title katabame ☘
+
+		link rel="icon" href="/favicon.svg"
+		/link rel="preload" as="style" href="/asset/css/style.css" onload="this.rel='stylesheet'"
+		link rel="stylesheet" href="/asset/css/style.css"
+
+	body
+		#particle-container
+			- 60.times do
+				.particle
+		.wrapper
+			#profile-container
+				.profile-card
+					img src="/asset/img/icon.gif" draggable="false"
+					h3 katabame
+					p I'm living on the void.
+					.info
+							p.icon-cake 2000/12/24
+							p.icon-marker Kumamoto,Japan
+							p.icon-transgender binary
+					address
+						a.button.icon-twitter.tooltip target="_blank" href="https://twitter.com/katabame"
+							.tooltip-content Twitter
+						a.button.icon-steam.tooltip target="_blank" href="https://steamcommunity.com/id/katabame/"
+							.tooltip-content Steam
+						a.button.icon-github.tooltip target="_blank" href="https://github.com/katabame"
+							.tooltip-content Github
+						a.button.icon-mail.tooltip href="mailto:mail@kataba.me"
+							.tooltip-content Email
+						a.button.icon-bitcoin.tooltip data-tooltip-has-image=true data-clipboard-text="1BkiNJVHePG5eRaqiLgxHQEZFFFB6hydws"
+							.tooltip-content
+								| Bitcoin (Click to copy)
+								img src="/asset/img/bitcoin.png"
+				#right
+					.discord-status
+						img#discord-avatar src="/asset/img/icon.gif" draggable="false"
+						div#status
+						#hype-badge.tooltip
+							.tooltip-content Hypesquad
+							img src="/asset/img/hypesquad.svg" draggable="false"
+						h3#discord-name katabame#3778
+						p#playing
+					.skill-card
+						.c100.p80.tooltip
+							.tooltip-content Stylus
+							img src="/asset/img/stylus.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+						.c100.p70.tooltip
+							.tooltip-content Affinity
+							img src="/asset/img/affinity.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+						.c100.p60.tooltip
+							.tooltip-content Slim
+							img src="/asset/img/slim.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+						.c100.p50.tooltip
+							.tooltip-content Python
+							img src="/asset/img/python.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+						.c100.p40.tooltip
+							.tooltip-content English
+							img src="/asset/img/english.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+						.c100.p30.tooltip
+							.tooltip-content C#
+							img src="/asset/img/csharp.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+						.c100.p20.tooltip
+							.tooltip-content Ubuntu
+							img src="/asset/img/ubuntu.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+						.c100.p10.tooltip
+							.tooltip-content PHP
+							img src="/asset/img/php.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+						.c100.p5.tooltip
+							.tooltip-content Chinese
+							img src="/asset/img/chinese.svg" draggable="false"
+							.slice
+								.bar
+								.fill
+
+		.wrapper
+			#works-container
+					.box
+						img src="/asset/img/works/sydneyhud.png" draggable="false"
+						p SydneyHUD
+						a.icon-github target="_blank" href="https://github.com/SydneyMOD/SydneyHUD"
+					.box
+						img src="/asset/img/notfound.png" draggable="false"
+						p Citador
+						a.icon-github target="_blank" href="https://github.com/nirewen/Citador"
+					.box
+						img src="/asset/img/works/chia.png" draggable="false"
+						p Chia
+						a.icon-github target="_blank" href="https://github.com/Chia-Network/website"
+						a.icon-web target="_blank" href="https://chia.net/"
+					.box
+						img src="/asset/img/works/bettertweetdeck.png" draggable="false"
+						p Better TweetDeck
+						a.icon-github target="_blank" href="https://github.com/eramdam/BetterTweetDeck"
+						a.icon-web target="_blank" href="https://better.tw/"
+					.box
+						img src="/asset/img/works/authmereloaded.png" draggable="false"
+						p AuthMe Reloaded
+						a.icon-github target="_blank" href="https://github.com/AuthMe/AuthMeReloaded"
+						a.icon-web target="_blank" href="https://dev.bukkit.org/projects/authme-reloaded"
+					.box
+						img src="/asset/img/notfound.png" draggable="false"
+						p github-mod
+						a.icon-github target="_blank" href="https://github.com/synthtech/github-mod"
+
+
+		.wrapper#footer
+			footer
+				p &copy; 2016 katabame
+				p
+					| Made with
+					a#ribbon href="https://github.com/katabame/"
+
+	script defer=true src="/asset/js/discord_status.js"
+	script defer=true src="/asset/js/clipboard.js"
+	script defer=true src="/asset/js/command.js"

@@ -1,0 +1,76 @@
+$circle-width = 0.04em
+
+$primary-color = #00BCD4
+$secondary-color = #cccccc
+
+.rect-auto
+	clip: rect(auto, auto, auto, auto)
+.pie
+	position: absolute
+	border: $circle-width solid $primary-color
+	width: 100%
+	height: 100%
+	clip: rect(0em, 0.5em, 1em, 0em)
+	border-radius: 50%
+	transform: rotate(0deg)
+.pie-fill
+	transform: rotate(180deg)
+
+
+.c100
+	*, *:before, *:after
+		box-sizing(content-box)
+	position: relative
+	font-size: 5rem // Change here to adjust circle size
+	width: 1em
+	height: @width
+	border-radius: 50%
+	float: left
+	margin: 0 0.1em 0.1em 0
+	background-color: $secondary-color
+
+	&.center
+		float: none
+		margin: 0 auto
+
+	img
+		position: absolute
+		z-index: 1
+		top: 50%
+		width: 50%
+		transform: translate(-50%, -50%)
+		transition-property: all
+		transition-duration: 0.2s
+		transition-timing-function: ease-out
+
+	&:after
+		position: absolute
+		top: $circle-width
+		left: @top
+		display: block
+		content: " "
+		border-radius: 50%
+		background-color: #ffffff
+		width: 1 - 2 * $circle-width
+		height: @width
+
+	.slice
+		position: absolute
+		width: 1em
+		height: @width
+		clip: rect(0em, 1em, 1em, 0.5em)
+
+	.bar
+		@extend .pie
+	for $j in 51..100
+		&.p{$j} .slice
+			@extend .rect-auto
+		&.p{$j} .bar:after
+			@extend .pie-fill
+		&.p{$j} .fill
+			@extend .pie
+			@extend .pie-fill
+
+	for $j in 1..100
+		&.p{$j} .bar
+			transform: rotate(360 / 100 * $j * 1deg)

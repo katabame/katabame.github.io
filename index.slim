@@ -20,8 +20,9 @@ html
 		title katabame ☘
 
 		link rel="icon" href="/favicon.svg"
-		/link rel="preload" as="style" href="/asset/css/style.css" onload="this.rel='stylesheet'"
-		link rel="stylesheet" href="/asset/css/style.css"
+		link rel="preload" as="style" href="/asset/css/style.css" onload="this.rel='stylesheet'"
+		script
+			| document.querySelectorAll('link[as = "style"]').forEach(i => i.setAttribute('rel', 'stylesheet'));
 
 	body
 		#particle-container
@@ -39,78 +40,80 @@ html
 							p.icon-transgender binary
 					address
 						a.button.icon-twitter.tooltip target="_blank" href="https://twitter.com/katabame"
-							.tooltip-content Twitter
+							.tooltip-hover Twitter
 						a.button.icon-steam.tooltip target="_blank" href="https://steamcommunity.com/id/katabame/"
-							.tooltip-content Steam
+							.tooltip-hover Steam
 						a.button.icon-github.tooltip target="_blank" href="https://github.com/katabame"
-							.tooltip-content Github
+							.tooltip-hover Github
 						a.button.icon-mail.tooltip href="mailto:mail@kataba.me"
-							.tooltip-content Email
-						a.button.icon-bitcoin.tooltip data-tooltip-has-image=true data-clipboard-text="1BkiNJVHePG5eRaqiLgxHQEZFFFB6hydws"
-							.tooltip-content
+							.tooltip-hover Email
+						a.button.icon-bitcoin.tooltip tabindex="1" data-tooltip-has-image=true data-clipboard-text="1BkiNJVHePG5eRaqiLgxHQEZFFFB6hydws"
+							.tooltip-hover
 								| Bitcoin (Click to copy)
 								img src="/asset/img/bitcoin.png"
+							.tooltip-active
+								| Copied!
 				#right
 					.discord-status
 						img#discord-avatar src="/asset/img/icon.gif" draggable="false"
 						div#status
 						#hype-badge.tooltip
-							.tooltip-content Hypesquad
+							.tooltip-hover Hypesquad
 							img src="/asset/img/hypesquad.svg" draggable="false"
 						h3#discord-name katabame#3778
 						p#playing
 					.skill-card
 						.c100.p80.tooltip
-							.tooltip-content Stylus
-							img src="/asset/img/stylus.svg" draggable="false"
+							.tooltip-hover Stylus
+							img src="/asset/img/skills/stylus.svg" draggable="false"
 							.slice
 								.bar
 								.fill
 						.c100.p70.tooltip
-							.tooltip-content Affinity
-							img src="/asset/img/affinity.svg" draggable="false"
+							.tooltip-hover Affinity
+							img src="/asset/img/skills/affinity.svg" draggable="false"
 							.slice
 								.bar
 								.fill
 						.c100.p60.tooltip
-							.tooltip-content Slim
-							img src="/asset/img/slim.svg" draggable="false"
+							.tooltip-hover Slim
+							img src="/asset/img/skills/slim.svg" draggable="false"
 							.slice
 								.bar
 								.fill
 						.c100.p50.tooltip
-							.tooltip-content Python
-							img src="/asset/img/python.svg" draggable="false"
+							.tooltip-hover Python
+							img src="/asset/img/skills/python.svg" draggable="false"
 							.slice
 								.bar
 								.fill
 						.c100.p40.tooltip
-							.tooltip-content English
-							img src="/asset/img/english.svg" draggable="false"
+							.tooltip-hover English
+							img src="/asset/img/skills/english.svg" draggable="false"
 							.slice
 								.bar
 								.fill
 						.c100.p30.tooltip
-							.tooltip-content C#
-							img src="/asset/img/csharp.svg" draggable="false"
+							.tooltip-hover C#
+							img src="/asset/img/skills/csharp.svg" draggable="false"
 							.slice
 								.bar
 								.fill
 						.c100.p20.tooltip
-							.tooltip-content Ubuntu
-							img src="/asset/img/ubuntu.svg" draggable="false"
+							.tooltip-hover Ubuntu
+							img src="/asset/img/skills/ubuntu.svg" draggable="false"
 							.slice
 								.bar
 								.fill
 						.c100.p10.tooltip
-							.tooltip-content PHP
-							img src="/asset/img/php.svg" draggable="false"
+							.tooltip-hover PHP
+							img src="/asset/img/skills/php.svg" draggable="false"
 							.slice
 								.bar
 								.fill
 						.c100.p5.tooltip
-							.tooltip-content Chinese
-							img src="/asset/img/chinese.svg" draggable="false"
+							.tooltip-hover Chinese
+							img src="/asset/img/skills/chinese.svg" draggable="false"
 							.slice
 								.bar
 								.fill
@@ -144,7 +147,6 @@ html
 						img src="/asset/img/notfound.png" draggable="false"
 						p github-mod
 						a.icon-github target="_blank" href="https://github.com/synthtech/github-mod"
-
 
 		.wrapper#footer
 			footer

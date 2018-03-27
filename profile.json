@@ -1,0 +1,80 @@
+{
+	"name": "katabame",
+	"nickname": "かたばみ",
+	"alias": [],
+	"profile": {
+		"email": ["mail@kataba.me"],
+		"url": "https://kataba.me",
+		"icon": "https://kataba.me/asset/img/icon.gif",
+		"bio": "Contributer",
+		"prefecture": "Kumamoto",
+		"location": "Kumamoto, Japan",
+		"birthday": {
+			"year": 2000,
+			"month": 12,
+			"day": 24
+		}
+	},
+	"skills": [
+		{
+			"name": "Stylus",
+			"degree": 80
+		},
+		{
+			"name": "English",
+			"degree": 45
+		}
+	],
+	"accounts": {
+		"twitter": [
+			{
+				"id": 4781715433,
+				"sn": "katabame",
+				"private": false
+			}
+		],
+		"github": [
+			{
+				"username": "katabame",
+				"private": false
+			}
+		],
+		"steam": [
+			{
+				"id": 76561198135250365,
+				"username": "katabame",
+				"private": false,
+				"family_sharing": []
+			}
+		],
+		"discord": [
+			{
+				"tag": "katabame#3778",
+				"private": false
+			}
+		],
+		"minecraft": [
+			{
+				"id": "katabame",
+				"uuid": "ade21692f32045a5a19deb0b95018cdd"
+			}
+		],
+		"curse": [
+			{
+				"id": "katabame",
+				"private": false
+			}
+		],
+		"other": [
+			{
+				"service": {
+					"name": "FINAL FANTASY XIV, The Lodestone",
+					"url": "https://jp.finalfantasyxiv.com/lodestone/character/"
+				},
+				"id": "21226007",
+				"username": "Ayame Katabame",
+				"profileUrl": "https://jp.finalfantasyxiv.com/lodestone/character/21226007/"
+			}
+		]
+	}
+}

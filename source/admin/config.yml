@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: katabame/kataba.me
+  branch: blog
+
+media_folder: source/images/
+
+collections:
+- name: "aster"
+  label: "Aster"
+  folder: "source/_posts"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime", default: ""}
+    - {label: "Categories", name: "categories", widget: "list", default: ""}
+    - {label: "Author", name: "author", widget: "string", default: "katabame"}
+    - {label: "Content", name: "body", widget: "markdown"}
+    - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+  meta:
+    - {label: "Tags", name: "tags", widget: "list", default: ""}

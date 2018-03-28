@@ -1,0 +1,3 @@
+[build]
+  command = "npm install -S hexo-generator-json-content && hexo generate"
+  publish = "/public"

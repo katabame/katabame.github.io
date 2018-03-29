@@ -1,0 +1,3 @@
+[build]
+    command = "npm install -g thumbsup && thumbsup --input . --output ./public --title Kalanchoe --theme cards"
+    publish = "/public"

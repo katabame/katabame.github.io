@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: katabame/kataba.me
+  name: git-gateway
   branch: blog
 
 media_folder: source/images/

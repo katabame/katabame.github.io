@@ -18,7 +18,7 @@ function updateDiscordStatus()
 			//setInterval(updateDiscordStatus, 60000)
 		}
 	};
-	req.open('GET', 'https://discordapp.com/api/guilds/417716643427385355/widget.json?' + Math.random().toString(36).slice(-8), true);
+	req.open('GET', 'https://discordapp.com/api/guilds/438946913203650570/widget.json?' + Math.random().toString(36).slice(-8), true);
 	req.send();
 }
 

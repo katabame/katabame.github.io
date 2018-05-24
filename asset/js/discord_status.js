@@ -1,3 +1,4 @@
+/*
 function updateDiscordStatus()
 {
 	var req = new XMLHttpRequest();
@@ -26,3 +27,4 @@ document.addEventListener('DOMContentLoaded', function()
 {
 	updateDiscordStatus();
 });
+*/

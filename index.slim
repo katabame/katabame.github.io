@@ -28,6 +28,8 @@ html
 		#particle-container
 			- 60.times do
 				.particle
+		#alert
+			p New site design is in conceptual stage! If you've idea, please tell me on Twitter or Discord!
 		.wrapper
 			#profile-container
 				.profile-card
@@ -47,12 +49,14 @@ html
 							.tooltip-hover Github
 						a.button.icon-mail.tooltip href="mailto:mail@kataba.me"
 							.tooltip-hover Email
-						a.button.icon-bitcoin.tooltip tabindex="1" data-tooltip-has-image=true data-clipboard-text="1BkiNJVHePG5eRaqiLgxHQEZFFFB6hydws"
+						
+						/a.button.icon-bitcoin.tooltip tabindex="1" data-tooltip-has-image=true data-clipboard-text="1BkiNJVHePG5eRaqiLgxHQEZFFFB6hydws"
 							.tooltip-hover
 								| Bitcoin (Click to copy)
 								img src="/asset/img/bitcoin.png"
 							.tooltip-active
 								| Copied!
+
 				#right
 					.discord-status
 						img#discord-avatar src="/asset/img/icon.gif" draggable="false"
